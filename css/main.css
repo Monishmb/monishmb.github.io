@@ -9,109 +9,208 @@ Author URL: https://www.themeinthebox.com/color-onepage-template-a/
 *******Typography******
 **************************/
 
-
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
-figure.snip1157 {
-  font-family: 'Raleway', Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
-  width: 100%;
-  color: #333;
-  text-align: left;
-  box-shadow: none !important;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
 }
-figure.snip1157 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-}
-figure.snip1157 img {
-  max-width: 100%;
-  vertical-align: middle;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  margin: 40px 0 0 10px;
-}
-figure.snip1157 blockquote {
-  display: block;
-  border-radius: 8px;
-  position: relative;
-  background-color: #fafafa;
-  padding: 25px 50px 30px 50px;
-  font-size: 0.8em;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.6em;
-  font-style: italic;
-}
-figure.snip1157 blockquote:before,
-figure.snip1157 blockquote:after {
-  font-family: 'FontAwesome';
-  content: "\201C";
-  position: absolute;
-  font-size: 50px;
-  opacity: 0.3;
-  font-style: normal;
-}
-figure.snip1157 blockquote:before {
-  top: 25px;
-  left: 20px;
-}
-figure.snip1157 blockquote:after {
-  content: "\201D";
-  right: 20px;
-  bottom: 0;
-}
-figure.snip1157 .arrow {
-  top: 100%;
-  width: 0;
-  height: 0;
-  border-left: 0 solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #fafafa;
-  margin: 0;
-  position: absolute;
-}
-figure.snip1157 .author {
-  position: absolute;
-  bottom: 45px;
-  padding: 0 10px 0 120px;
-  margin: 0;
-  text-transform: uppercase;
-  color: #ffffff;
-  -webkit-transform: translateY(50%);
-  transform: translateY(50%);
-}
-figure.snip1157 .author h5 {
-  opacity: 0.8;
-  margin: 0;
-  font-weight: 800;
-}
-figure.snip1157 .author h5 span {
-  font-weight: 400;
-  text-transform: none;
-  padding-left: 5px;
+a:link,a:active,a:visited,a:hover{
+	color:#3f51b5;
 }
 
+.outerdiv
+{
+	  width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans Pro';
 
-/* Demo purposes only */
-html {
-  height: 100%;
 }
-body {
-  background-color: #212121;
+.innerdiv
+{
+	transform: scale(0.9);
+	margin: 0.8rem;
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-rows: repeat(3,22rem);
+	grid-template-columns: repeat(5,17rem);
+}
+.eachdiv
+{
+	padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+    color: white;
+    font-family: 'Source Sans Pro';
+}
+.div1
+{
+	background: #000000;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    
+}
+.div2
+{
+	background:#000000;
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+.div3
+{
+	background: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    color: black;
+}
+.div4
+{
+	background: white;
+	grid-column: 1/2;
+    grid-row: 2/3;
+    color: black;
+}
+.div5
+{
+	background: #ffffff;
+	grid-column: 1/3;
+    grid-row: 2/3;
+}
+.div8{
+  background: #18202D;
+	grid-column: 1/4;
+    grid-row: 3/3;
+}
+.div7{
+  background: #18202D;
+	grid-column: 4/5;
+    grid-row: 3/3;
+}
+.div9{
+  background: #18202D;
+	grid-column: 5/5;
+    grid-row: 2/4;
+}
+.userdetails
+{
+	display: flex;
+}
+.imgbox
+{
+	margin-right: 1rem;
+}
+.imgbox img
+{
+	border-radius: 50%;
+	width: 5rem;
+	border: 1px solid #cec5c5;
+}
+.detbox
+{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detbox p
+{
+	margin: 0;
+}
+.detbox .name
+{
+	color: hsl(0, 0%, 81%);
+    font-size: 1.5rem;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+.detbox .name.dark
+{
+	color: #49505A;
+}
+.detbox .designation
+{
+	color: hsl(0, 0%, 81%);
+    opacity: 50%;
+    font-size: 0.9rem;
+}
+.detbox .designation.dark
+{
+	color: #49505A;
+}
+.review h4
+{
+	font-size: 1.4rem;
+	color: #000000;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+.review.dark h4{
+	color:#ffffff;
+}
+.review p
+{
+	font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 500;
+    opacity: 50%;
+    line-height: 1.5;
+}
+.review.dark p{
+	color: #0e0e0e;
+}
+.attribution
+{
+	font-size: 1rem;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+}
+.attribution a
+{
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.innerdiv
+	{
+		transform: scale(0.7);
+	}
+}
+@media only screen and (max-width: 800px)
+{
+	.innerdiv
+	{
+		transform: scale(0.6);
+	}
+}
+@media only screen and (max-width: 600px)
+{
+	.div1 {
+		background-position-x: 10rem;
+	}
+	.innerdiv
+	{
+		display: flex; 
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  margin: 0;
-  height: 100%;
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 2rem;
+		margin-bottom: 5rem;
+	}
+	.attribution
+	{
+		position: relative;
+	}
 }
 
 body {
@@ -128,8 +227,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-family: 'Source Sans Pro';
   color: #272727;
 }
 p {
