@@ -216,7 +216,7 @@ a:link,a:active,a:visited,a:hover{
 body {
   padding-top: 60px;
   background: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   color: #64686d;
   line-height: 26px;
@@ -877,4 +877,14 @@ ul.nostyle i {
 .form-control {
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+.footer-icons{
+  display: inline;
+  padding-left: 3rem;
+  
+}
+
+.col-ft-12{
+  text-align: center;
 }
