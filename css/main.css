@@ -38,8 +38,8 @@ a:link,a:active,a:visited,a:hover{
 	margin: 0.8rem;
 	display: grid;
 	grid-gap: 1.5rem;
-	grid-template-rows: repeat(3,22rem);
-	grid-template-columns: repeat(5,17rem);
+	grid-template-rows: repeat(3,28rem);
+	grid-template-columns: repeat(5,20rem);
 }
 .eachdiv
 {
@@ -273,7 +273,7 @@ hr {
   font-size: 28px;
   line-height: 38px;
   text-align: center;
-  font-weight: 400;
+  font-size: xxx-large;
   color: #262f32;
   text-transform: uppercase;
 
