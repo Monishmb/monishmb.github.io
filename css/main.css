@@ -121,7 +121,7 @@ a:hover {
 .detbox .designation {
   color: hsl(0, 0%, 81%);
   opacity: 50%;
-  font-size: 0.9rem;
+  font-size: 18px;
 }
 .detbox .designation.dark {
   color: #49505a;
