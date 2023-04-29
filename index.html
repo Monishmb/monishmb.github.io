@@ -72,57 +72,24 @@
         </div>
     </header>
 
-    <section id="main-slider">
-        <div class="owl-carousel">
-            <div class="item" style="background-image: url(images/slider/bg4.jpg);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="carousel-content text-center">
+    <div style="padding: 0px;" class="container-fluid">
+        <img id="slider-image" width="100%" class="img-fluid" src="images/slider/bg3.jpg" alt="">
+    </div>
 
-                                    <p> </p>
+    <script>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
-            <div class="item" style="background-image: url(images/slider/bg2.jpg);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="carousel-content text-center">
+        setInterval(function () {
+            var images = ['images/slider/bg3.jpg', 'images/slider/bg2.jpg', 'images/slider/bg1.jpg'];
+            var i = Math.floor(Math.random() * images.length);
+            document.getElementById('slider-image').src = images[i];
+        }, 2000);
 
-                                    <h2>OUR MAIN GOAL IS CONTINUOUSLY SATISFY OUR <span>Clients</span></h2>
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua. </p> -->
-                                    <a class="btn btn-primary btn-lg" href="#about">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
-            <div class="item" style="background-image: url(images/slider/bg3.jpg);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="carousel-content text-center">
-                                    <!-- <h2>Accessible design is good design. Only with <span>Color</span>.</h2> -->
-                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua. </p> -->
-                                    <!-- <a class="btn btn-primary btn-lg" href="#about">Read More</a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
 
-        </div><!--/.owl-carousel-->
-    </section><!--/#main-slider-->
+    </script>
+
+
+
+
 
     <section id="about">
         <div class="container">
@@ -142,7 +109,7 @@
                         MB creatives is the one stop solution for all your digital marketing needs!
                     </p>
                     <p>
-                        Incorporated on 15th October 2020, we initially proceeded with graphic designing services however changing consumer demands and continuously varying trends led to a need for complete digital marketing solutions.
+                        Incorporated on 15th October 2020, we initially proceeded with graphic designing services however, changing consumer demands and continuously varying trends led to a need for complete digital marketing solutions.
                         Not waiting for a single second more, MB creatives launched their premium digital marketing package including e-commerce.
                     </p>
                     <p>
@@ -434,7 +401,7 @@
                         <img class="img-responsive" src="images/Clients/a.jpg" alt="">
                         <div class="portfolio-info">
                             <a class="preview" href="images/Clients/a.jpg" rel="prettyPhoto">
-                                <img src="images/Clients/a.png" alt="" width="300" height="300">
+                                <img src="images/Clients/a.jpg" alt="" width="300" height="300">
                             </a>
                         </div>
                     </div>
@@ -625,7 +592,7 @@
                         <img class="img-responsive" src="images/businesscards/2.jpg" alt="">
                         <div class="portfolio-info">
                             <a class="preview" href="images/businesscards/2.jpg" rel="prettyPhoto">
-                                <img src="images/businesscards/2.jpeg" alt="" width="300" height="300">
+                                <img src="images/businesscards/2.jpg" alt="" width="300" height="300">
                             </a>
                         </div>
                     </div>
