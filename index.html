@@ -72,24 +72,55 @@
         </div>
     </header>
 
-    <div style="padding: 0px;" class="container-fluid">
-        <img id="slider-image" width="100%" class="img-fluid" src="images/slider/bg3.jpg" alt="">
-    </div>
+    <section id="main-slider">
+        <div class="owl-carousel">
+            <div class="item" style="background-image: url(images/slider/bg4.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-content text-center">
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(images/slider/bg2.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-content text-center">
 
-    <script>
+                                    <h2>OUR MAIN GOAL IS CONTINUOUSLY SATISFY OUR <span>Clients</span></h2>
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua. </p> -->
+                                    <a class="btn btn-primary btn-lg" href="#about">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(images/slider/bg3.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-content text-center">
+                                    <!-- <h2>Accessible design is good design. Only with <span>Color</span>.</h2> -->
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna incididunt ut labore aliqua. </p> -->
+                                    <!-- <a class="btn btn-primary btn-lg" href="#about">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
 
-        setInterval(function () {
-            var images = ['images/slider/bg3.jpg', 'images/slider/bg2.jpg', 'images/slider/bg1.jpg'];
-            var i = Math.floor(Math.random() * images.length);
-            document.getElementById('slider-image').src = images[i];
-        }, 2000);
-
-
-    </script>
-
-
-
-
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
 
     <section id="about">
         <div class="container">
