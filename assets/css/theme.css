@@ -21246,8 +21246,12 @@ a {
 
 /* Custom Css */
 
-.w-40 {
-  width: 40%;
+.w-20 {
+  width: 20%;
+}
+
+.fs-80 {
+  font-size: 70px;
 }
 
 .form-control-custom {
@@ -21259,6 +21263,6 @@ a {
   margin: 2%;
 }
 
-.font-ubuntu{
+.font-ubuntu {
   font-family: "Ubuntu";
 }
