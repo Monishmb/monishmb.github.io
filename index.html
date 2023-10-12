@@ -41,22 +41,19 @@
 
 <!-- ============================================-->
 <!-- <LOADING section> begin ============================-->
-<section style="height: 100vh; background-color: black;" id="loading">
+<section class="align-items-center" style="height: 100vh; background-color: black; display: flex;" id="loading">
   <div class="container d-flex justify-content-center">
-    <div class="row py-lg-8 py-6">
-      <div class="col-12">
-        <center>
-          <img class="img-fluid w-50" src="assets/img/loading.gif" alt="" />
-        </center>
-      </div>
-    </div>
+    <center>
+      <img class="img-fluid w-50" src="assets/img/loading.gif" alt="" />
+    </center>
   </div>
 </section>
 <script>
 
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
-  }, 5000)
+    document.getElementById("top").style.display = "block";
+  }, 4500)
 
 </script>
 <!-- <LOADING section> close ============================-->
@@ -67,7 +64,7 @@
   <!-- ===============================================-->
   <!--    Main Content-->
   <!-- ===============================================-->
-  <main class="main" id="top">
+  <main style="display: none;" class="main" id="top">
     <nav style="background-color: black !important;" class="navbar navbar-expand-lg fixed-top navbar-dark"
       data-navbar-on-scroll="data-navbar-on-scroll">
       <div class="container">
