@@ -41,7 +41,9 @@
 
 <!-- ============================================-->
 <!-- <LOADING section> begin ============================-->
-<section class="align-items-center" style="height: 100vh; background-color: black; display: flex;" id="loading">
+<section class="align-items-center"
+  style="position: fixed; z-index: 1; height: 100vh; width: 100vw; background-color: black; display: flex;"
+  id="loading">
   <div class="container d-flex justify-content-center">
     <center>
       <img class="img-fluid w-50" src="assets/img/loading.gif" alt="" />
@@ -55,13 +57,13 @@
 
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
-    document.getElementById("top").style.display = "block";
-    document.getElementById("footer").style.display = "block";
+    document.getElementById("header").style.display = "block";
+    // document.getElementById("footer").style.display = "block";
   }, 4500)
 
   /////
   party.confetti(runButton, {
-    count: party.variation.range(20, 40),
+    count: party.variation.range(80, 40),
   }); onmousedown = "party.confetti(this)"
 
 </script>
@@ -73,7 +75,7 @@
 <!-- ============================================-->
 
 
-<body>
+<body onmousedown="party.confetti(this)">
   <!-- <div class="center">
     <div class="button button1" onmousedown="party.confetti(this)">Happy!</div>
     <div class="button button2" onmousedown="party.confetti(this)">Good!</div>
@@ -82,11 +84,11 @@
   <!-- ===============================================-->
   <!--    Main Content-->
   <!-- ===============================================-->
-  <main style="display: none;" class="main" id="top">
-    <nav style="background-color: black !important;" class="navbar navbar-expand-lg fixed-top navbar-dark"
-      data-navbar-on-scroll="data-navbar-on-scroll">
+  <main class="main">
+    <nav id="header" style="background-color: black !important; display: none;"
+      class="navbar navbar-expand-lg fixed-top navbar-dark" data-navbar-on-scroll="data-navbar-on-scroll">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a onmousedown="party.confetti(this)" class="navbar-brand" href="index.html">
           <img height="64px" src="assets/img/Logo.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -693,7 +695,7 @@
 
   <!-- ============================================-->
   <!-- <section> begin ============================-->
-  <section id="footer" style="display: none;" class="pt-0">
+  <section id="footer" class="pt-0">
     <br><br>
     <hr>
     <div class="container">
