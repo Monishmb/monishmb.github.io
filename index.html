@@ -48,19 +48,37 @@
     </center>
   </div>
 </section>
+
+
+
 <script>
 
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
     document.getElementById("top").style.display = "block";
+    document.getElementById("footer").style.display = "block";
   }, 4500)
 
+  /////
+  party.confetti(runButton, {
+    count: party.variation.range(20, 40),
+  }); onmousedown = "party.confetti(this)"
+
 </script>
+
+<!-- Party JS -->
+<script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
 <!-- <LOADING section> close ============================-->
 <!-- ============================================-->
 
 
 <body>
+  <!-- <div class="center">
+    <div class="button button1" onmousedown="party.confetti(this)">Happy!</div>
+    <div class="button button2" onmousedown="party.confetti(this)">Good!</div>
+    <div class="button button3" onmousedown="party.confetti(this)">congratulation!</div>
+  </div> -->
   <!-- ===============================================-->
   <!--    Main Content-->
   <!-- ===============================================-->
@@ -78,12 +96,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
             <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="#home">Home</a></li> -->
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#testimonial">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#clients">Clients</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#work">Work</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#contact">Contact</a></li>
+            <li class="nav-item"><a onmousedown="party.confetti(this)" class="nav-link" aria-current="page"
+                href="#about">About</a></li>
+            <li class="nav-item"><a onmousedown="party.confetti(this)" class="nav-link" aria-current="page"
+                href="#services">Services</a></li>
+            <li class="nav-item"><a onmousedown="party.confetti(this)" class="nav-link" aria-current="page"
+                href="#testimonial">Testimonials</a></li>
+            <li class="nav-item"><a onmousedown="party.confetti(this)" class="nav-link" aria-current="page"
+                href="#clients">Clients</a></li>
+            <li class="nav-item"><a onmousedown="party.confetti(this)" class="nav-link" aria-current="page"
+                href="#work">Work</a></li>
+            <li class="nav-item"><a onmousedown="party.confetti(this)" class="nav-link" aria-current="page"
+                href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -638,7 +662,8 @@
 
               <div class="clearfix"></div>
               <div class="text-center">
-                <button style="background-color: black;" type="submit" class="btn btn-dark btn-lg btn-send-msg">Send
+                <button onmousedown="party.confetti(this)" style="background-color: black;" type="submit"
+                  class="btn btn-dark btn-lg btn-send-msg">Send
                   Message</button>
               </div>
 
@@ -663,24 +688,24 @@
   <!--    End of Main Content-->
   <!-- ===============================================-->
 
-  <br><br>
-  <hr>
+
 
 
   <!-- ============================================-->
   <!-- <section> begin ============================-->
-  <section class="pt-0">
-
+  <section id="footer" style="display: none;" class="pt-0">
+    <br><br>
+    <hr>
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-12 col-md-12 col-lg-12 col-sm-12">
           <center>
-            <a href="index.html">
+            <a onmousedown="party.confetti(this)" href="index.html">
               <img width="150px" class="img-fluid mt-5 mb-4" src="assets/img/black-logo.png" alt="">
               <p class="text-gray">© 2023 MB Creatives. All Rights Reserved</p>
             </a>
 
-            <a class="text-black" href="https://www.instagram.com/mb__creatives/">
+            <a onmousedown="party.confetti(this)" class="text-black" href="https://www.instagram.com/mb__creatives/">
               <i class="fs-5 fa-brands fa-instagram"></i>
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -688,7 +713,7 @@
               <i class="fs-5 fa-brands fa-whatsapp"></i>
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="text-black" href="mailto:contact@mb-creatives.com">
+            <a onmousedown="party.confetti(this)" class="text-black" href="mailto:contact@mb-creatives.com">
               <i class="fs-5 fa-solid fa-envelope"></i>
             </a>
 
