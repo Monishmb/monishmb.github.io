@@ -41,7 +41,7 @@
 
 <!-- ============================================-->
 <!-- <LOADING section> begin ============================-->
-<section class="align-items-center"
+<!-- <section class="align-items-center"
   style="position: fixed; z-index: 1; height: 100vh; width: 100vw; background-color: black; display: flex;"
   id="loading">
   <div class="container d-flex justify-content-center">
@@ -49,24 +49,7 @@
       <img class="img-fluid w-50" src="assets/img/loading.gif" alt="" />
     </center>
   </div>
-</section>
-
-
-
-<script>
-
-  setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("header").style.display = "block";
-    // document.getElementById("footer").style.display = "block";
-  }, 4500)
-
-  /////
-  // party.confetti(runButton, {
-  //   count: party.variation.range(80, 40),
-  // }); onmousedown = "party.confetti(this)"
-
-</script>
+</section> -->
 
 <!-- Party JS -->
 <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
@@ -85,11 +68,19 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <main class="main">
-    <nav id="header" style="background-color: black !important; display: none;"
-      class="navbar navbar-expand-lg fixed-top navbar-dark" data-navbar-on-scroll="data-navbar-on-scroll">
+    <nav id="header" style="background-color: black !important;" class="navbar navbar-expand-lg fixed-top navbar-dark"
+      data-navbar-on-scroll="data-navbar-on-scroll">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img height="64px" src="assets/img/Logo.png" alt="">
+          <img style="display: block;" id="nav_logo_normal" height="70px" src="assets/img/Logo.png" alt="">
+          <!-- <img id="nav_logo_animated" class="p-0 m-0" height="150px" src="assets/img/loading.gif" alt=""> -->
+          <script>
+            // setTimeout(() => {
+            //   document.getElementById("nav_logo_animated").style.display = "none";
+            //   document.getElementById("nav_logo_normal").style.display = "block";
+            //   // document.getElementById("footer").style.display = "block";
+            // }, 4500)
+          </script>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -612,11 +603,8 @@
         <div class="row">
 
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 animated animate-from-left">
-
             <h2>Get in touch with us</h2>
-
             <!-- <br> -->
-
             <p>
               Phone: <a href="tel:+918286507507">+91 8286507507</a>
               <br>
@@ -629,7 +617,6 @@
                 width="100%" height="450" style="border:0;" allowfullscreen=""
                 referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </p>
-
           </div>
 
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 animated animate-from-left">
