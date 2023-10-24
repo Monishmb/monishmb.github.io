@@ -34,7 +34,7 @@
   <link href="vendors/prism/prism.css" rel="stylesheet">
   <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/theme.css" rel="stylesheet" />
-  <link href="assets/css/user.css" rel="stylesheet" />
+  <!-- <link href="assets/css/user.css" rel="stylesheet" /> -->
 
 </head>
 
@@ -68,18 +68,17 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <main class="main">
-    <nav id="header" style="background-color: black !important;" class="navbar navbar-expand-lg fixed-top navbar-dark"
+    <nav id="header" style="background: black !important;" class="navbar navbar-expand-lg fixed-top navbar-dark"
       data-navbar-on-scroll="data-navbar-on-scroll">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img style="display: block;" id="nav_logo_normal" height="70px" src="assets/img/Logo.png" alt="">
-          <!-- <img id="nav_logo_animated" class="p-0 m-0" height="150px" src="assets/img/loading.gif" alt=""> -->
+          <img id="nav_logo_normal" height="100px" src="assets/img/Logo.png" alt="" style="display: none;">
+          <img id="nav_logo_animated" height="100px" src="assets/img/animation.gif" alt="">
           <script>
-            // setTimeout(() => {
-            //   document.getElementById("nav_logo_animated").style.display = "none";
-            //   document.getElementById("nav_logo_normal").style.display = "block";
-            //   // document.getElementById("footer").style.display = "block";
-            // }, 4500)
+            setTimeout(() => {
+              document.getElementById("nav_logo_animated").style.display = "none";
+              document.getElementById("nav_logo_normal").style.display = "block";
+            }, 4500)
           </script>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
