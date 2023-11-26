@@ -624,7 +624,8 @@
             <p class="wow fadeInDown animated" style="visibility: visible;">Drop a line to us. Your word is
               most important to us.</p>
             <br>
-            <form id="main-contact-form" name="contact-form" method="post" action="https://formspree.io/f/xoqzrzpl">
+            <form id="main-contact-form" name="contact-form" method="post"
+              action="https://shivaaycreations.in/contact_scripts/submitMBCreatives.php">
               <div class="form-group">
                 <label for="name">Your Name (Required)</label><br>
                 <input id="name" type="text" name="name" class="form-control-custom" placeholder="Name" required>
@@ -633,7 +634,6 @@
                 <label for="email">Email Address</label><br>
                 <input type="email" id="email" name="email" class="form-control-custom" placeholder="Email" required>
               </div>
-
               <div class="animated animate-from-right" style="opacity: 1; right: 0px;">
                 <div class="form-group">
                   <label for="message">Your Message</label><br>
@@ -641,7 +641,15 @@
                     required></textarea>
                 </div>
               </div>
-
+              <div style="display: none;" class="col-12">
+                <input type="text" id="current-date" name="date" value="" required>
+              </div>
+              <script>
+                var current_date = new Date();
+                let month = current_date.getMonth() + 1;
+                var date_time = current_date.getDate() + "/" + month + "/" + current_date.getFullYear();
+                document.getElementById("current-date").value = date_time;
+              </script>
               <div class="clearfix"></div>
               <div class="text-center">
                 <button style="background-color: black;" type="submit" class="btn btn-dark btn-lg btn-send-msg">Send
