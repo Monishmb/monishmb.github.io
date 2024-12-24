@@ -2,38 +2,63 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- ===============================================-->
-  <!--    Document Title-->
-  <!-- ===============================================-->
-  <title>MB Creatives</title>
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>MB Creatives</title>
 
-  <!-- ===============================================-->
-  <!--    Favicons-->
-  <!-- ===============================================-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/Logo.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/Logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/Logo.png">
-  <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico"> -->
-  <!-- <link rel="manifest" href="assets/img/favicons/manifest.json"> -->
-  <!-- <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png"> -->
-  <meta name="theme-color" content="#ffffff">
-  <!-- GoogleFonts -->
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/Logo.png">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico"> -->
+    <!-- <link rel="manifest" href="assets/img/favicons/manifest.json"> -->
+    <!-- <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png"> -->
+    <meta name="theme-color" content="#ffffff">
+    <!-- GoogleFonts -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 
-  <!-- ===============================================-->
-  <!--    Stylesheets-->
-  <!-- ===============================================-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap"
-    rel="stylesheet">
-  <link href="vendors/prism/prism.css" rel="stylesheet">
-  <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/theme.css" rel="stylesheet" />
-  <!-- <link href="assets/css/user.css" rel="stylesheet" /> -->
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="vendors/prism/prism.css" rel="stylesheet">
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <!-- <link href="assets/css/user.css" rel="stylesheet" /> -->
+
+    <style>
+        /* Snowflake styles */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            /* Start slightly off-screen */
+            color: white;
+            /* White snowflakes */
+            font-size: 10px;
+            /* Base font size, scaled dynamically */
+            opacity: 0.8;
+            /* Slight transparency for a soft effect */
+            user-select: none;
+            /* Prevent text selection */
+            pointer-events: none;
+            /* Ignore mouse events */
+            animation: fall linear infinite;
+            /* Apply keyframe animation */
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 
 </head>
 
@@ -58,51 +83,96 @@
 
 
 <body>
-  <!-- <div class="center">
+    <script>
+        // JavaScript to create the snowfall effect
+        const snowflakeCharacters = ['✻', '❅', '❆']; // Snowflake shapes
+        const numFlakes = 100; // Number of snowflakes
+
+        // Function to create a single snowflake element
+        function createSnowflake() {
+            const snowflake = document.createElement('div'); // Create a div for the snowflake
+            snowflake.className = 'snowflake';
+            snowflake.innerText = snowflakeCharacters[Math.floor(Math.random() * snowflakeCharacters.length)];
+            snowflake.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px'; // Random size
+            snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Random fall duration
+            snowflake.style.animationDelay = Math.random() * 5 + 's'; // Random start delay
+            document.body.appendChild(snowflake);
+
+            // Remove snowflake after animation ends
+            snowflake.addEventListener('animationend', () => {
+                snowflake.remove();
+            });
+        }
+
+        // Function to start the snowfall effect
+        function startSnowfall() {
+            setInterval(createSnowflake, 200); // Add a new snowflake every 200ms
+        }
+
+        // Keyframe animation for snowflakes
+        const styleSheet = document.createElement('style');
+        styleSheet.innerText = `
+          @keyframes fall {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+          }
+          .snowflake {
+            animation: fall linear infinite;
+          }
+        `;
+        document.head.appendChild(styleSheet);
+
+        // Start the snowfall when the page loads
+        startSnowfall();
+    </script>
+    <!-- <div class="center">
     <div class="button button1" >Happy!</div>
     <div class="button button2" >Good!</div>
     <div class="button button3" >congratulation!</div>
   </div> -->
-  <!-- ===============================================-->
-  <!--    Main Content-->
-  <!-- ===============================================-->
-  <main class="main">
-    <nav id="header" style="background: black !important; padding: 0px;"
-      class="navbar navbar-expand-lg fixed-top navbar-dark" data-navbar-on-scroll="data-navbar-on-scroll">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img id="nav_logo_normal" height="100px" src="assets/img/Logo.png" alt="" style="display: none;">
-          <img id="nav_logo_animated" height="100px" src="assets/img/animation.gif" alt="">
-          <script>
-            setTimeout(() => {
-              document.getElementById("nav_logo_animated").style.display = "none";
-              document.getElementById("nav_logo_normal").style.display = "block";
-            }, 4500)
-          </script>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars text-white fs-3"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="#home">Home</a></li> -->
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#testimonial">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#clients">Clients</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#work">Work</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="bg-dark"><img class="img-fluid position-absolute end-0" src="assets/img/hero/hero-bg.png" alt="">
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main">
+        <nav id="header" style="background: black !important; padding: 0px;"
+            class="navbar navbar-expand-lg fixed-top navbar-dark" data-navbar-on-scroll="data-navbar-on-scroll">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img id="nav_logo_normal" height="100px" src="assets/img/Logo.png" alt="" style="display: none;">
+                    <img id="nav_logo_animated" height="100px" src="assets/img/animation.gif" alt="">
+                    <script>
+                        setTimeout(() => {
+                            document.getElementById("nav_logo_animated").style.display = "none";
+                            document.getElementById("nav_logo_normal").style.display = "block";
+                        }, 4500)
+                    </script>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white fs-3"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="#home">Home</a></li> -->
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page"
+                                href="#testimonial">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#clients">Clients</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#work">Work</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="bg-dark"><img class="img-fluid position-absolute end-0" src="assets/img/hero/hero-bg.png" alt="">
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section id="home">
+            <!-- ============================================-->
+            <!-- <section> begin ============================-->
+            <!-- <section id="home">
         <br><br>
         <div class="container">
           <div class="row align-items-center py-lg-8 py-6">
@@ -123,554 +193,653 @@
           </div>
         </div>
       </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+            <!-- <section> close ============================-->
+            <!-- ============================================-->
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section id="about">
-        <br><br>
-        <div class="container">
-          <div class="row align-items-center py-lg-8 py-6">
-            <div class="col-lg-6 text-center text-lg-start">
-              <h2 class="text-white font-ubuntu">MB CREATIVES is the one stop solution for all your digital marketing
-                needs!</h2>
-              <p style="font-size: large;" class="text-white py-lg-3 py-2 font-ubuntu">
-                <b>
-                  Incorporated on 15th October 2020, we initially proceeded with graphic designing services however,
-                  changing consumer
-                  demands and continuously varying trends led to a need for complete digital marketing solutions. Not
-                  waiting for a single
-                  second more, MB creatives launched their premium digital marketing package including e-commerce.
-                  <br><br>
-                  Starting our affiliations with local hotel and travel industry experts, our work spoke for itself and
-                  we
-                  shortly got
-                  connected with International clients as-well. Running our motto “OUR CREATIVITY, YOUR PUBLICITY” in
-                  our
-                  veins, we work
-                  with absolute dedication and professionalism and are always focused towards delivering quality work
-                  and
-                  client
-                  satisfaction. Extensively reaching out to various industries, MB CREATIVES now works globally.
-                </b>
-              </p>
-              <!-- <div class="d-sm-flex align-items-center gap-3">
+            <!-- ============================================-->
+            <!-- <section> begin ============================-->
+            <section id="about">
+                <br><br>
+                <div class="container">
+                    <div class="row align-items-center py-lg-8 py-6">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h2 class="text-white font-ubuntu">MB CREATIVES is the one stop solution for all your
+                                digital marketing
+                                needs!</h2>
+                            <p style="font-size: large;" class="text-white py-lg-3 py-2 font-ubuntu">
+                                <b>
+                                    Incorporated on 15th October 2020, we initially proceeded with graphic designing
+                                    services however,
+                                    changing consumer
+                                    demands and continuously varying trends led to a need for complete digital marketing
+                                    solutions. Not
+                                    waiting for a single
+                                    second more, MB creatives launched their premium digital marketing package including
+                                    e-commerce.
+                                    <br><br>
+                                    Starting our affiliations with local hotel and travel industry experts, our work
+                                    spoke for itself and
+                                    we
+                                    shortly got
+                                    connected with International clients as-well. Running our motto “OUR CREATIVITY,
+                                    YOUR PUBLICITY” in
+                                    our
+                                    veins, we work
+                                    with absolute dedication and professionalism and are always focused towards
+                                    delivering quality work
+                                    and
+                                    client
+                                    satisfaction. Extensively reaching out to various industries, MB CREATIVES now works
+                                    globally.
+                                </b>
+                            </p>
+                            <!-- <div class="d-sm-flex align-items-center gap-3">
                 <a href="#services" class="btn btn-outline-light mb-3 w-75">Explore</a>
               </div> -->
-            </div>
-            <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0">
-              <img class="img-fluid" src="assets/img/hero/hero-graphics.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0">
+                            <img class="img-fluid" src="assets/img/hero/hero-graphics.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <!-- end of .container-->
 
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-    </div>
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section id="services">
-
-      <div class="container">
-        <h2 class="mx-auto text-center fs-80">Our Services</h2>
-        <!-- <p class="text-center fs-1"></p> -->
-        <div class="row gx-xl-7 mt-5">
-
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/social-media.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">DIGITAL MARKETING</h4>
-            <p class="fs-1 mb-0 text-center">
-              We are here to take care of all your marketing needs and provide you with potential clients and
-              leads.
-            </p>
-          </div>
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/curve.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">GRAPHIC DESIGNING</h4>
-            <p class="fs-1 mb-0 text-center">
-              Graphics plays an important role in designing, so we are here to provide you the high quality content for
-              your brand.
-            </p>
-          </div>
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/branding.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">BRANDING</h4>
-            <p class="fs-1 mb-0 text-center">
-              Branding is the strategic practice of shaping a distinctive identity for a product, service, or company.
-            </p>
-          </div>
-
-
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/online-advertising.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">ADVERTISING</h4>
-            <p class="fs-1 mb-0 text-center">
-              Advertising can be done offline as well as online. We cater to both of them
-              with our
-              out of the world
-              USPs to gain required attention from public. Our stats speak for themselves.
-            </p>
-          </div>
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/ecommerce.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">E-COMMERCE MARKETING</h4>
-            <p class="fs-1 mb-0 text-center">
-              Having presence on e-commerce platforms can be a huge benefit for your business. We will get you listed on
-              platforms
-              like Amazon, Meesho, Flipkart,etc. to provide success to your business.
-            </p>
-          </div>
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/laptop.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">WEB DEVELOPMENT</h4>
-            <p class="fs-1 mb-0 text-center">
-              Website is a great tool to provide information about your company and products to the prospects. We are
-              providing web
-              development services to increase your presence online.
-            </p>
-          </div>
-
-
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/newsletter.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">E-MAIL MARKETING</h4>
-            <p class="fs-1 mb-0 text-center">
-              For every rupee spent on Email marketing the average ROI is 18X. We help B2B brands get meetings with
-              prospects that fit
-              their Client Avatar by creating ICPs and emailing them.
-            </p>
-          </div>
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/analytics.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">WEB ANALYTICS</h4>
-            <p class="fs-1 mb-0 text-center">
-              Web analytics is the process of collecting, measuring, and analyzing data from websites
-              and gain insights into user behavior and engagement.
-            </p>
-          </div>
-          <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
-            <center>
-              <img class="w-20" src="assets/img/services/social media ana.png" alt="">
-            </center>
-            <h4 class="mt-3 my-1 text-center">SOCIAL MEDIA ANALYTICS</h4>
-            <p class="fs-1 mb-0 text-center">
-              Social media analytics is the process of collecting, measuring, and analyzing data from social
-              media platforms to gain insights into user behavior and engagement.
-            </p>
-          </div>
-
+            </section>
+            <!-- <section> close ============================-->
+            <!-- ============================================-->
 
 
         </div>
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
 
 
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section id="services">
 
+            <div class="container">
+                <h2 class="mx-auto text-center fs-80">Our Services</h2>
+                <!-- <p class="text-center fs-1"></p> -->
+                <div class="row gx-xl-7 mt-5">
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="bg-dark pt-6" id="testimonial">
-
-      <div class="container">
-        <div class="col-md-6">
-          <h1 class="text-white fs-lg-5 fs-md-3 fs-2">Here's what our happy clients say about us</h1>
-        </div>
-        <div class="swiper mt-7">
-          <div class="swiper-container swiper-theme"
-            data-swiper='{"slidesPerView":1,"breakpoints":{"640":{"slidesPerView":1,"spaceBetween":10},"768":{"slidesPerView":2,"spaceBetween":20},"1025":{"slidesPerView":3,"spaceBetween":40}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"loop":true,"freeMode":true,"loopedSlides":3}'>
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    We love the exorbitant fantastic service offered by Monish & Team. It's quick & makes the process
-                    smooth. He plans the
-                    whole year's strategy & executes it without any reminder. Thank you team for the best experience.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/1.png" alt=""> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Kajal Kathrani</p>The Commerce Hub
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/social-media.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">DIGITAL MARKETING</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            We are here to take care of all your marketing needs and provide you with potential clients
+                            and
+                            leads.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    I got the best service in town for google listings and posters. Rates are so reasonable. Highly
-                    recommended.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/2.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Bhavna Bhagnani</p>Lotus Kindergarten
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/curve.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">GRAPHIC DESIGNING</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Graphics plays an important role in designing, so we are here to provide you the high
+                            quality content for
+                            your brand.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    A poster which was displayed in the mall was made by MB Creatives for BIRYANI HOUSE! The customers
-                    got attracted by the
-                    design and the sales was increased. I'm happy with their services.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/3.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Sanjay Dabolkar</p>Biryani House
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/branding.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">BRANDING</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Branding is the strategic practice of shaping a distinctive identity for a product, service,
+                            or company.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    MB Creatives is the Right Platform to do promotions for our business & I Designed Papaji's Menu from
-                    Mb Creatives he is
-                    such a nice guy who gives his 100% to complete the work. So I prefer his Hard work & Perfection in
-                    his work.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/3.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Sarvan Singh</p>Papaji Fastfood
+
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/online-advertising.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">ADVERTISING</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Advertising can be done offline as well as online. We cater to both of them
+                            with our
+                            out of the world
+                            USPs to gain required attention from public. Our stats speak for themselves.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    MB Creatives provides excellent service. Understands the client's needs and shares options for
-                    designs. Offers quick
-                    modifications and prompt actions. Highly recommend having their services.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/3.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Dhiraj Talreja</p>Pizza Yay
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/ecommerce.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">E-COMMERCE MARKETING</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Having presence on e-commerce platforms can be a huge benefit for your business. We will get
+                            you listed on
+                            platforms
+                            like Amazon, Meesho, Flipkart,etc. to provide success to your business.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    Talking about MB Creatives,I've designed a few banners from them.It turned out to be excellent. I
-                    would surely recommend
-                    MB Creatives.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/3.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Jagdish Israni</p>Unique Group Tuitions
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/laptop.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">WEB DEVELOPMENT</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Website is a great tool to provide information about your company and products to the
+                            prospects. We are
+                            providing web
+                            development services to increase your presence online.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    I was really amazed with the service what I received from Mb Creatives. What I really liked about is
-                    the out come of the
-                    product which was asked and exactly same the results was. Plus, Mb Creative's is perfect for
-                    Internet/ Digital Marketing
-                    services. I will definitely be back in the future!
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/3.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Anjali Khushlani</p>The Nail Ally
+
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/newsletter.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">E-MAIL MARKETING</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            For every rupee spent on Email marketing the average ROI is 18X. We help B2B brands get
+                            meetings with
+                            prospects that fit
+                            their Client Avatar by creating ICPs and emailing them.
+                        </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <h4 class="text-black">
-                    I am very happy with the work MB Creatives is doing, they are innovative, efficient, and quick.
-                  </h4>
-                  <div class="d-flex align-items-center gap-3 mt-5">
-                    <!-- <img src="assets/img/review/3.png" alt="" /> -->
-                    <div class="text-black">
-                      <p class="mb-0 fw-bold text-dark">Pratik Dharamshi</p>Success Maxx
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/analytics.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">WEB ANALYTICS</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Web analytics is the process of collecting, measuring, and analyzing data from websites
+                            and gain insights into user behavior and engagement.
+                        </p>
                     </div>
-                  </div>
+                    <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start mt-3">
+                        <center>
+                            <img class="w-20" src="assets/img/services/social media ana.png" alt="">
+                        </center>
+                        <h4 class="mt-3 my-1 text-center">SOCIAL MEDIA ANALYTICS</h4>
+                        <p class="fs-1 mb-0 text-center">
+                            Social media analytics is the process of collecting, measuring, and analyzing data from
+                            social
+                            media platforms to gain insights into user behavior and engagement.
+                        </p>
+                    </div>
+
+
+
                 </div>
-              </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="bg-dark pt-6" id="testimonial">
+
+            <div class="container">
+                <div class="col-md-6">
+                    <h1 class="text-white fs-lg-5 fs-md-3 fs-2">Here's what our happy clients say about us</h1>
+                </div>
+                <div class="swiper mt-7">
+                    <div class="swiper-container swiper-theme"
+                        data-swiper='{"slidesPerView":1,"breakpoints":{"640":{"slidesPerView":1,"spaceBetween":10},"768":{"slidesPerView":2,"spaceBetween":20},"1025":{"slidesPerView":3,"spaceBetween":40}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"loop":true,"freeMode":true,"loopedSlides":3}'>
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        We love the exorbitant fantastic service offered by Monish & Team. It's quick &
+                                        makes the process
+                                        smooth. He plans the
+                                        whole year's strategy & executes it without any reminder. Thank you team for the
+                                        best experience.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/1.png" alt=""> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Kajal Kathrani</p>The Commerce Hub
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        I got the best service in town for google listings and posters. Rates are so
+                                        reasonable. Highly
+                                        recommended.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/2.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Bhavna Bhagnani</p>Lotus Kindergarten
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        A poster which was displayed in the mall was made by MB Creatives for BIRYANI
+                                        HOUSE! The customers
+                                        got attracted by the
+                                        design and the sales was increased. I'm happy with their services.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/3.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Sanjay Dabolkar</p>Biryani House
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        MB Creatives is the Right Platform to do promotions for our business & I
+                                        Designed Papaji's Menu from
+                                        Mb Creatives he is
+                                        such a nice guy who gives his 100% to complete the work. So I prefer his Hard
+                                        work & Perfection in
+                                        his work.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/3.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Sarvan Singh</p>Papaji Fastfood
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        MB Creatives provides excellent service. Understands the client's needs and
+                                        shares options for
+                                        designs. Offers quick
+                                        modifications and prompt actions. Highly recommend having their services.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/3.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Dhiraj Talreja</p>Pizza Yay
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        Talking about MB Creatives,I've designed a few banners from them.It turned out
+                                        to be excellent. I
+                                        would surely recommend
+                                        MB Creatives.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/3.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Jagdish Israni</p>Unique Group Tuitions
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        I was really amazed with the service what I received from Mb Creatives. What I
+                                        really liked about is
+                                        the out come of the
+                                        product which was asked and exactly same the results was. Plus, Mb Creative's is
+                                        perfect for
+                                        Internet/ Digital Marketing
+                                        services. I will definitely be back in the future!
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/3.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Anjali Khushlani</p>The Nail Ally
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <h4 class="text-black">
+                                        I am very happy with the work MB Creatives is doing, they are innovative,
+                                        efficient, and quick.
+                                    </h4>
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <!-- <img src="assets/img/review/3.png" alt="" /> -->
+                                        <div class="text-black">
+                                            <p class="mb-0 fw-bold text-dark">Pratik Dharamshi</p>Success Maxx
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><span class="fas fa-arrow-right fs-lg-3 fs-2"></span></div>
+                    <div class="swiper-button-prev"><span class="fas fa-arrow-left fs-lg-3 fs-2"></span></div>
+                </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->\
+
+
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="pb-0" id="clients">
+
+            <div class="container">
+                <h2 class="mx-auto text-center fs-80 w-lg-75">Our Clients</h2>
+                <div class="row mt-7 gx-xl-7">
+
+                    <div class="swiper">
+                        <div class="swiper-container swiper-theme"
+                            data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/23.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/22.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/25.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/2.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/7.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/3.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/8.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/4.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/6.jpg"
+                                        alt=""></div>
+                                <!-- <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/9.jpg" alt=""></div> -->
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/10.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/11.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/12.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/13.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/14.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/16.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/17.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/18.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/19.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/20.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/21.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/24.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/26.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/27.jpg"
+                                        alt=""></div>
+                                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/28.jpg"
+                                        alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
 
             </div>
-          </div>
-          <div class="swiper-button-next"><span class="fas fa-arrow-right fs-lg-3 fs-2"></span></div>
-          <div class="swiper-button-prev"><span class="fas fa-arrow-left fs-lg-3 fs-2"></span></div>
-        </div>
-      </div>
-      <!-- end of .container-->
+            <!-- end of .container-->
 
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->\
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="pb-0" id="clients">
 
-      <div class="container">
-        <h2 class="mx-auto text-center fs-80 w-lg-75">Our Clients</h2>
-        <div class="row mt-7 gx-xl-7">
 
-          <div class="swiper">
-            <div class="swiper-container swiper-theme"
-              data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/2.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/3.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/4.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/6.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/7.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/8.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/9.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/10.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/11.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/12.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/13.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/14.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/16.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/17.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/18.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/19.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/20.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/21.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/22.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/23.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/24.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/25.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/26.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/27.jpg" alt=""></div>
-                <div class="swiper-slide text-center"><img width="200px" src="assets/img/Clients/28.jpg" alt=""></div>
-              </div>
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="pb-0" id="work">
+
+            <div class="container">
+                <h2 class="mx-auto text-center fs-80">Our Work</h2>
+                <div class="row mt-7 gx-xl-7">
+
+                    <h3>LOGO DESIGNS</h3>
+                    <hr>
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/Logo/1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/Logo/3.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/Logo/5.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <h3>SOCIAL MEDIA POSTERS</h3>
+                    <hr>
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/posters/3.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/posters/5.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/posters/6.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <h3>MENU CARD DESIGNS</h3>
+                    <hr>
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/menucards/1.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/menucards/2.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/menucards/3.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <h3>BUSINESS CARD DESIGNS</h3>
+                    <hr>
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/businesscards/1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/businesscards/2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center text-md-start h-auto mb-5">
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <img class="w-100 w-md-100 rounded-2" src="assets/img/businesscards/3.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-          </div>
-          <br><br>
-        </div>
+            <!-- end of .container-->
 
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="pb-0" id="contact">
 
+            <div class="container">
+                <h2 class="mx-auto text-center fs-80">Let's Connect</h2>
+                <br><br><br><br>
+                <div class="row">
 
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="pb-0" id="work">
-
-      <div class="container">
-        <h2 class="mx-auto text-center fs-80">Our Work</h2>
-        <div class="row mt-7 gx-xl-7">
-
-          <h3>LOGO DESIGNS</h3>
-          <hr>
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/Logo/1.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/Logo/3.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/Logo/5.jpg" alt="">
-            </div>
-          </div>
-
-          <h3>SOCIAL MEDIA POSTERS</h3>
-          <hr>
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/posters/3.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/posters/5.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/posters/6.jpg" alt="">
-            </div>
-          </div>
-
-          <h3>MENU CARD DESIGNS</h3>
-          <hr>
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/menucards/1.jpeg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/menucards/2.jpeg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/menucards/3.jpeg" alt="">
-            </div>
-          </div>
-
-          <h3>BUSINESS CARD DESIGNS</h3>
-          <hr>
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/businesscards/1.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/businesscards/2.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="col-md-4 text-center text-md-start h-auto mb-5">
-            <div class="d-flex justify-content-between flex-column h-100">
-              <img class="w-100 w-md-100 rounded-2" src="assets/img/businesscards/3.jpg" alt="">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="pb-0" id="contact">
-
-      <div class="container">
-        <h2 class="mx-auto text-center fs-80">Let's Connect</h2>
-        <br><br><br><br>
-        <div class="row">
-
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 animated animate-from-left">
-            <h2>Get in touch with us</h2>
-            <!-- <br> -->
-            <p>
-              Phone: <a href="tel:+918286507507">+91 8286507507</a>
-              <br>
-              <!-- Address: 14/604, MILLENIUM PARK, HARIOM NAGAR, MULUND EAST 400081 -->
-              <!-- <br> -->
-              Email: <a href="mailto:contact@mb-creatives.com">contact@mb-creatives.com</a>
-              <br><br>
-              <!-- <iframe
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 animated animate-from-left">
+                        <h2>Get in touch with us</h2>
+                        <!-- <br> -->
+                        <p>
+                            Phone: <a href="tel:+918286507507">+91 8286507507</a>
+                            <br>
+                            <!-- Address: 14/604, MILLENIUM PARK, HARIOM NAGAR, MULUND EAST 400081 -->
+                            <!-- <br> -->
+                            Email: <a href="mailto:contact@mb-creatives.com">contact@mb-creatives.com</a>
+                            <br><br>
+                            <!-- <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4356962605675!2d72.9726225!3d19.1761633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8dd1fd8ef01%3A0x683c579ae82202ac!2sMillenium%20Park%20CHS%20Building%20no.%2014!5e0!3m2!1sen!2sin!4v1682704901268!5m2!1sen!2sin"
                 width="100%" height="450" style="border:0;" allowfullscreen=""
                 referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-            </p>
-          </div>
+                        </p>
+                    </div>
 
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 animated animate-from-left">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 animated animate-from-left">
 
-            <h2>Send Message</h2>
-            <p class="wow fadeInDown animated" style="visibility: visible;">Drop a line to us. Your word is
-              most important to us.</p>
-            <br>
-            <form id="main-contact-form" name="contact-form" method="post"
-              action="https://shivaaycreations.in/contact_scripts/submitMBCreatives.php">
-              <div class="form-group">
-                <label for="name">Your Name (Required)</label><br>
-                <input id="name" type="text" name="name" class="form-control-custom" placeholder="Name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label><br>
-                <input type="email" id="email" name="email" class="form-control-custom" placeholder="Email" required>
-              </div>
-              <div class="animated animate-from-right" style="opacity: 1; right: 0px;">
-                <div class="form-group">
-                  <label for="message">Your Message</label><br>
-                  <textarea name="message" id="message" class="form-control-custom" rows="8" placeholder="Message"
-                    required></textarea>
+                        <h2>Send Message</h2>
+                        <p class="wow fadeInDown animated" style="visibility: visible;">Drop a line to us. Your word is
+                            most important to us.</p>
+                        <br>
+                        <form id="main-contact-form" name="contact-form" method="post"
+                            action="https://shivaaycreations.in/contact_scripts/submitMBCreatives.php">
+                            <div class="form-group">
+                                <label for="name">Your Name (Required)</label><br>
+                                <input id="name" type="text" name="name" class="form-control-custom" placeholder="Name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label><br>
+                                <input type="email" id="email" name="email" class="form-control-custom"
+                                    placeholder="Email" required>
+                            </div>
+                            <div class="animated animate-from-right" style="opacity: 1; right: 0px;">
+                                <div class="form-group">
+                                    <label for="message">Your Message</label><br>
+                                    <textarea name="message" id="message" class="form-control-custom" rows="8"
+                                        placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <div style="display: none;" class="col-12">
+                                <input type="text" id="current-date" name="date" value="" required>
+                            </div>
+                            <script>
+                                var current_date = new Date();
+                                let month = current_date.getMonth() + 1;
+                                var date_time = current_date.getDate() + "/" + month + "/" + current_date.getFullYear();
+                                document.getElementById("current-date").value = date_time;
+                            </script>
+                            <div class="clearfix"></div>
+                            <div class="text-center">
+                                <button style="background-color: black;" type="submit"
+                                    class="btn btn-dark btn-lg btn-send-msg">Send
+                                    Message</button>
+                            </div>
+
+                    </div>
+
+
+                    </form>
+
                 </div>
-              </div>
-              <div style="display: none;" class="col-12">
-                <input type="text" id="current-date" name="date" value="" required>
-              </div>
-              <script>
-                var current_date = new Date();
-                let month = current_date.getMonth() + 1;
-                var date_time = current_date.getDate() + "/" + month + "/" + current_date.getFullYear();
-                document.getElementById("current-date").value = date_time;
-              </script>
-              <div class="clearfix"></div>
-              <div class="text-center">
-                <button style="background-color: black;" type="submit" class="btn btn-dark btn-lg btn-send-msg">Send
-                  Message</button>
-              </div>
 
-          </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
 
-          </form>
 
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section id="footer" class="pt-0">
+        <br><br>
+        <hr>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-12 col-lg-12 col-sm-12">
+                    <center>
+                        <a href="index.html">
+                            <img width="150px" class="img-fluid mt-5 mb-4" src="assets/img/black-logo.png" alt="">
+                            <p class="text-gray">© 2023 MB Creatives. All Rights Reserved</p>
+                        </a>
+
+                        <a class="text-black" href="https://www.instagram.com/mb__creatives/">
+                            <i class="fs-5 fa-brands fa-instagram"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-black" href="https://wa.me/+918286507507">
+                            <i class="fs-5 fa-brands fa-whatsapp"></i>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="text-black" href="mailto:contact@mb-creatives.com">
+                            <i class="fs-5 fa-solid fa-envelope"></i>
+                        </a>
+
+                    </center>
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- end of .container-->
+        <!-- end of .container-->
 
     </section>
     <!-- <section> close ============================-->
@@ -678,66 +847,20 @@
 
 
 
-  </main>
-  <!-- ===============================================-->
-  <!--    End of Main Content-->
-  <!-- ===============================================-->
 
-
-
-
-  <!-- ============================================-->
-  <!-- <section> begin ============================-->
-  <section id="footer" class="pt-0">
-    <br><br>
-    <hr>
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-12 col-md-12 col-lg-12 col-sm-12">
-          <center>
-            <a href="index.html">
-              <img width="150px" class="img-fluid mt-5 mb-4" src="assets/img/black-logo.png" alt="">
-              <p class="text-gray">© 2023 MB Creatives. All Rights Reserved</p>
-            </a>
-
-            <a class="text-black" href="https://www.instagram.com/mb__creatives/">
-              <i class="fs-5 fa-brands fa-instagram"></i>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="text-black" href="https://wa.me/+918286507507">
-              <i class="fs-5 fa-brands fa-whatsapp"></i>
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="text-black" href="mailto:contact@mb-creatives.com">
-              <i class="fs-5 fa-solid fa-envelope"></i>
-            </a>
-
-          </center>
-        </div>
-      </div>
-    </div>
-    <!-- end of .container-->
-
-  </section>
-  <!-- <section> close ============================-->
-  <!-- ============================================-->
-
-
-
-
-  <!-- ===============================================-->
-  <!--    JavaScripts-->
-  <!-- ===============================================-->
-  <script src="vendors/popper/popper.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.min.js"></script>
-  <script src="vendors/anchorjs/anchor.min.js"></script>
-  <script src="vendors/is/is.min.js"></script>
-  <script src="vendors/fontawesome/all.min.js"></script>
-  <script src="vendors/lodash/lodash.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-  <script src="vendors/prism/prism.js"></script>
-  <script src="vendors/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/theme.js"></script>
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/anchorjs/anchor.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 
 </body>
 
