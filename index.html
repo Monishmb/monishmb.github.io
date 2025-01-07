@@ -34,32 +34,6 @@
     <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet" />
     <!-- <link href="assets/css/user.css" rel="stylesheet" /> -->
-
-    <style>
-        /* Snowflake styles */
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            /* Start slightly off-screen */
-            color: white;
-            /* White snowflakes */
-            font-size: 10px;
-            /* Base font size, scaled dynamically */
-            opacity: 0.8;
-            /* Slight transparency for a soft effect */
-            user-select: none;
-            /* Prevent text selection */
-            pointer-events: none;
-            /* Ignore mouse events */
-            animation: fall linear infinite;
-            /* Apply keyframe animation */
-        }
-
-        body {
-            overflow-x: hidden;
-        }
-    </style>
-
 </head>
 
 
@@ -83,49 +57,6 @@
 
 
 <body>
-    <script>
-        // JavaScript to create the snowfall effect
-        const snowflakeCharacters = ['✻', '❅', '❆']; // Snowflake shapes
-        const numFlakes = 100; // Number of snowflakes
-
-        // Function to create a single snowflake element
-        function createSnowflake() {
-            const snowflake = document.createElement('div'); // Create a div for the snowflake
-            snowflake.className = 'snowflake';
-            snowflake.innerText = snowflakeCharacters[Math.floor(Math.random() * snowflakeCharacters.length)];
-            snowflake.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
-            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px'; // Random size
-            snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Random fall duration
-            snowflake.style.animationDelay = Math.random() * 5 + 's'; // Random start delay
-            document.body.appendChild(snowflake);
-
-            // Remove snowflake after animation ends
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-            });
-        }
-
-        // Function to start the snowfall effect
-        function startSnowfall() {
-            setInterval(createSnowflake, 200); // Add a new snowflake every 200ms
-        }
-
-        // Keyframe animation for snowflakes
-        const styleSheet = document.createElement('style');
-        styleSheet.innerText = `
-          @keyframes fall {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(100vh); opacity: 0; }
-          }
-          .snowflake {
-            animation: fall linear infinite;
-          }
-        `;
-        document.head.appendChild(styleSheet);
-
-        // Start the snowfall when the page loads
-        startSnowfall();
-    </script>
     <!-- <div class="center">
     <div class="button button1" >Happy!</div>
     <div class="button button2" >Good!</div>
